@@ -23,6 +23,7 @@ def mage_stats(mages: list[dict]) -> dict:
         "avg_power": avg_power
     }
 
+
 def main() -> None:
     artifacts = [
         {"name": "Fire Staff", "power": 92, "type": "weapon"},
@@ -31,18 +32,16 @@ def main() -> None:
     spells = [
         "fireball", "heal", "shield"
     ]
-    
+
     transf = spell_transformer(spells)
     sort_art = artifact_sorter(artifacts)
     print("Testing artifact sorter...")
     print(
         f"{sort_art[0]["name"]} ({sort_art[0]["power"]} power)"
         f" comes before {sort_art[1]["name"]} ({sort_art[1]["power"]} power)"
-        )
+    )
     print("\nTesting spell transformer...")
     print(" ".join(transf))
-    
-    
 
 
 if __name__ == "__main__":
